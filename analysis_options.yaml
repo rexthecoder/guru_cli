@@ -1,5 +1,7 @@
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+# https://dart.dev/tools/linter-rules
+
 analyzer:
   exclude:
     - test/
@@ -32,15 +34,7 @@ dart_code_metrics:
       file-nullsafety-migration-cost: 2
       unit-type: "hours"
   metrics-exclude:
-    - test/src/analyzer_plugin/**
-    - test/src/analyzers/**
-    - test/src/cli/**
-    - test/src/config_builder/**
-    - test/src/helpers/**
-    - test/src/reporters/**
-    - test/src/utils/**
-    - test/resources/*
-    - test/*
+    - test/
   rules:
     - avoid-collection-methods-with-unrelated-types
     - avoid-dynamic:
@@ -49,7 +43,7 @@ dart_code_metrics:
     - avoid-global-state
     - avoid-late-keyword:
         exclude:
-          - test/**
+          - test/
     - avoid-missing-enum-constant-in-map
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
